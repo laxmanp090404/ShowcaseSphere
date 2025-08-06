@@ -6,7 +6,7 @@ const SectionHeader = ({
     description,
 }:{
     title: string,
-    eyebrow: string,
+    eyebrow: string, 
     description: string
 }) => {
   return (
@@ -24,6 +24,7 @@ const SectionHeader = ({
         <p className="text-center md:text-lg lg:text-xl text-white/60 mt-4 max-w-md mx-auto">
           {description}
         </p>
+        
     </>
   )
 }

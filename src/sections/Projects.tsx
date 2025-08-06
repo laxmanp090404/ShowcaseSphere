@@ -30,7 +30,7 @@ const portfolioProjects = [
       { title: "Real-time notifications regarding garbage collection" },
       { title: "Leaflet integration for location display" },
     ],
-    link: "https://github.com/laxmanp090404/WasteWise_Advanced",
+    link: "https://waste-wise-advanced.vercel.app/",
     image: wastewiseImage,
   },
   {
@@ -83,6 +83,7 @@ export const ProjectsSection = () => {
 
 ))}
               </ul>
+              
               <a href={proj.link}>
                 
                 <button className="bg-white text-gray-950 h-12 w-full md:w-auto md:px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8"><span>Visit Live Site</span><ArrowUpRightIcon className="size-4"/></button>
