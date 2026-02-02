@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
+import { twMerge } from 'tailwind-merge'
 
-export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size: number, rotation: number }>) => {
+export const HeroOrbit = ({ children, size, rotation , shouldOrbit = false,shouldSpin = false,spinDuration,orbitDuration }: PropsWithChildren<{ size: number, rotation: number ,shouldOrbit?:boolean,shouldSpin?:boolean,spinDuration?:string,orbitDuration?:string }>) => {
   return (
     <div
       className="absolute left-0 right-0 top-0 bottom-0 mx-auto"
@@ -13,6 +14,10 @@ export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size
         zIndex: -1,  // Ensure it is behind the content
       }}
     >
+      <div className={twMerge(shouldOrbit === true && 'animate-spin')} style={{
+        animationDuration:orbitDuration
+      }}>
+
       {/* StarIcon placed based on flex and alignment */}
       <div
         className="flex justify-end items-start"
@@ -20,11 +25,16 @@ export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size
           height: `${size}px`,
           width: `${size}px`,
         }}
-      >
+        >
+          <div className={twMerge(shouldSpin === true && "animate-spin")} style={{
+            animationDuration:spinDuration
+          }}>
         <div className='inline-flex' style={{ transform: `rotate(-${rotation}deg)` }}>
           {children}
         </div>
       </div>
+      </div>
+        </div>
     </div>
   );
 };
