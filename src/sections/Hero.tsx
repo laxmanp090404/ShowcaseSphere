@@ -15,7 +15,7 @@ export const HeroSection = () => {
         style={{
           backgroundImage: `url(${grainImage.src})`,
         }}
-      ></div>
+      ></div> 
       {/* creating the custom ring  */}
       <div className="hero-ring size-[620px]"></div>
       <div className="hero-ring size-[820px]"></div>

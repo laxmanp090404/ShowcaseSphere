@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import CheckIcon from '@/assets/icons/check-circle.svg'
 import ArrowUpRightIcon from '@/assets/icons/arrow-up-right.svg'
@@ -54,11 +53,16 @@ export const ProjectsSection = () => {
         <SectionHeader eyebrow=" Testimony of My Skills" title=" Featured Projects" description=" See how I transformed Ideas into engaging digital experiences"/>
         <div className="proj-container flex flex-col mt-10 md:mt-20 gap-20">
           {
-          portfolioProjects.map((proj) => (
+          portfolioProjects.map((proj,projIndex) => (
             
             <Card
               key={proj.title}
-              className="p-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="p-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky"
+              style = {
+                {
+                  top:`calc(64px + ${projIndex * 40}px)`
+                }
+              }
             >
                
                <div className="largescreen lg:grid lg:grid-cols-2 lg:gap-16">
