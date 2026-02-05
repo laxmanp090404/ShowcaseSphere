@@ -7,7 +7,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg"
 export const HeroSection = () => {
   return (
-    <div className="py-28 md:py-44 lg:py-52 relative z-0 overflow-x-clip ">
+    <div id="hero" className="py-28 md:py-44 lg:py-52 relative z-0 overflow-x-clip ">
       <div className="orbitwrapper absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       {/* grainy texture effect  */}
       <div
